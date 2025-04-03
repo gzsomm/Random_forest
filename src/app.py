@@ -7,7 +7,7 @@ import pickle
 import numpy as np
 
 # Cargar el modelo entrenado
-MODEL_PATH = "/workspaces/Random_forest/models/randomforest_classifier_n200_42.sav"
+MODEL_PATH = "/workspaces/Random_forest/src/randomforest_classifier_n200_42.sav"
 model = joblib.load(MODEL_PATH)
 
 st.title("Predicción de Diabetes")
@@ -32,3 +32,7 @@ if st.button("Predecir"):
     prediction = model.predict(input_data)
     resultado = "Diabético" if prediction[0] == 1 else "No Diabético"
     st.write(f"Resultado: **{resultado}**")
+
+
+
+# Enlace render: https://fourgeeks-streamlit-integration-wc0f.onrender.com
