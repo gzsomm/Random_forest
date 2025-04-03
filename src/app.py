@@ -2,12 +2,13 @@
 # engine = db_connect()
 
 import streamlit as st
+import joblib
 import pickle
 import numpy as np
 
 # Cargar el modelo entrenado
-with open("/workspaces/Random_forest/models/randomforest_classifier_n200_42.sav", "rb") as file:
-    model = pickle.load(file)
+MODEL_PATH = "/workspaces/Random_forest/models/randomforest_classifier_n200_42.sav"
+model = joblib.load(MODEL_PATH)
 
 st.title("Predicción de Diabetes")
 
